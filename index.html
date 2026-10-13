@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>אפולו</title>
+<meta name="description" content="יש לכם כסף בפיקדון או בקרן כספית? בדקו כמה תשואה אתם משאירים על השולחן – Apollo אשראי ואג״ח מול קרן כספית.">
+<meta name="theme-color" content="#0a1f3d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@700;900&family=Heebo:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+if (!window.fbq) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','927153239795105');
+  fbq('track','PageView');
+}
+</script>
+
+<style>
+:root{
+  --navy:#0a1f3d; --navy2:#122a4f; --card:#16305a; --line:rgba(255,255,255,.12);
+  --blue:#3165AE; --sky:#5bbcf5; --orange:#f08a2e; --orange2:#e46f1c; --gold:#e8b45a;
+  --text:#ffffff; --muted:#b9c6dc; --ok:#38c172;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Heebo',sans-serif;background:var(--navy);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:96px;overflow-x:hidden}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px}
+h1,h2{font-family:'Frank Ruhl Libre',serif;font-weight:900;line-height:1.15}
+.num{font-family:'Heebo',sans-serif;font-weight:900;direction:ltr;unicode-bidi:isolate;display:inline-block}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(10,31,61,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand .mark{white-space:nowrap;direction:ltr;width:40px;height:36px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px;color:#0B0D10;letter-spacing:-1px}
+.brand .mark b{color:var(--blue)}
+.brand .nm{font-weight:800;font-size:15px;line-height:1.1}
+.brand .nm small{display:block;font-weight:400;font-size:11px;color:var(--muted)}
+.hphone{color:#fff;text-decoration:none;font-weight:700;font-size:14px;border:1px solid var(--line);padding:7px 12px;border-radius:30px}
+
+/* hero */
+.hero{padding:26px 0 8px}
+.pill{display:inline-block;border:1px solid rgba(240,138,46,.55);background:rgba(240,138,46,.1);color:var(--gold);font-weight:700;font-size:15px;padding:9px 16px;border-radius:40px}
+.hero h1{font-size:40px;margin:18px 0 12px}
+.hero h1 .hl{color:var(--orange)}
+.hero h1 sup{font-size:.45em;color:var(--muted)}
+.hero p.sub{font-size:19px;color:#dfe7f4}
+
+/* video */
+.video-card{margin:24px auto 0;position:relative;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:9/16;max-width:380px;box-shadow:0 20px 50px rgba(0,0,0,.45);border:1px solid var(--line)}
+.video-card video{width:100%;height:100%;object-fit:cover;display:block}
+.play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:34px;gap:10px;background:linear-gradient(180deg,rgba(10,31,61,0) 55%,rgba(10,31,61,.92));border:0;cursor:pointer;color:#fff;font-family:inherit}
+.play .btn{width:78px;height:78px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 0 0 0 rgba(240,138,46,.6);animation:pulse 2s infinite}
+.play .btn svg{width:30px;height:30px;margin-left:5px}
+.play .lbl{font-weight:800;font-size:17px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.play .dur{font-size:13px;color:#dfe7f4}
+.play.hidden{display:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(240,138,46,.55)}70%{box-shadow:0 0 0 22px rgba(240,138,46,0)}100%{box-shadow:0 0 0 0 rgba(240,138,46,0)}}
+.vcap{text-align:center;color:var(--muted);font-size:14px;margin-top:10px}
+
+/* section */
+section{padding:34px 0 0}
+.sec-t{font-size:28px;margin-bottom:8px}
+.sec-s{color:var(--muted);font-size:16px;margin-bottom:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+
+/* bars */
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.row h3{font-size:19px;font-weight:800}
+.row .d{color:var(--muted);font-size:14px;margin-top:2px}
+.big{font-size:44px;line-height:1;white-space:nowrap;flex-shrink:0}
+.big small{font-size:18px;font-weight:700;margin-left:3px;opacity:.85}
+.bar{height:22px;border-radius:30px;background:#e9edf3;margin:14px 0 26px;overflow:hidden;direction:rtl}
+.bar i{display:block;height:100%;border-radius:30px;width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.bar.a i{background:linear-gradient(90deg,var(--orange2),var(--orange))}
+.bar.k i{background:var(--sky)}
+.c-a{color:var(--orange)} .c-k{color:var(--sky)}
+.gap{display:flex;align-items:center;gap:16px;border-top:1px solid var(--line);padding-top:18px}
+.gap .big{color:var(--orange);font-size:52px}
+.gap p{font-size:17px}
+.foot-note{color:var(--muted);font-size:12px;margin-top:14px;line-height:1.5}
+
+/* compare table */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;overflow:hidden;border-radius:18px;border:1px solid var(--line)}
+.cmp th,.cmp td{padding:13px 10px;text-align:center;border-bottom:1px solid var(--line);vertical-align:middle}
+.cmp tr:last-child td{border-bottom:0}
+.cmp thead th{background:var(--navy2);font-weight:800;font-size:15px}
+.cmp thead th.ap{color:var(--orange)} .cmp thead th.kp{color:var(--sky)}
+.cmp td:first-child{text-align:right;font-weight:700;color:#dfe7f4;width:30%}
+.cmp td.ap{background:rgba(240,138,46,.08);font-weight:700}
+.cmp td.kp{color:#cfd9ea}
+
+/* points */
+.pts{display:grid;gap:12px}
+.pt{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.pt .ic{flex:0 0 42px;height:42px;border-radius:12px;background:rgba(49,101,174,.35);display:grid;place-items:center;font-size:20px}
+.pt h4{font-size:17px;font-weight:800;margin-bottom:2px}
+.pt p{font-size:15px;color:var(--muted)}
+
+/* calc */
+.calc label{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px;font-size:16px}
+.calc label .num{color:var(--orange);font-size:18px}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:10px;background:#2a4573;outline:none;margin-bottom:22px;direction:rtl}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:28px;height:28px;border-radius:50%;background:var(--orange);border:4px solid #fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border-radius:50%;background:var(--orange);border:4px solid #fff;cursor:pointer}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.res div{background:var(--navy2);border-radius:14px;padding:12px;text-align:center}
+.res span{display:block;font-size:13px;color:var(--muted)}
+.res b{font-size:20px}
+.res .win{grid-column:1/-1;background:linear-gradient(135deg,rgba(240,138,46,.2),rgba(240,138,46,.06));border:1px solid rgba(240,138,46,.5)}
+.res .win b{font-size:34px;color:var(--orange)}
+
+/* funnel */
+.funnel{scroll-margin-top:70px}
+.prog{height:6px;background:#2a4573;border-radius:6px;margin-bottom:18px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--orange);transition:width .35s}
+.step{display:none}
+.step.on{display:block;animation:fade .35s}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.q{font-size:21px;font-weight:800;margin-bottom:14px}
+.opts{display:grid;gap:10px}
+.opt{font-family:inherit;font-size:17px;font-weight:600;color:#fff;background:var(--navy2);border:1.5px solid var(--line);border-radius:14px;padding:15px 16px;text-align:right;cursor:pointer;transition:.15s}
+.opt:hover,.opt:focus-visible{border-color:var(--orange);outline:none}
+.opt.sel{border-color:var(--orange);background:rgba(240,138,46,.14)}
+.back{background:none;border:0;color:var(--muted);font-family:inherit;font-size:14px;margin-top:14px;cursor:pointer;text-decoration:underline}
+.badge{display:inline-block;background:rgba(56,193,114,.15);color:var(--ok);border:1px solid rgba(56,193,114,.5);border-radius:30px;padding:5px 12px;font-size:14px;font-weight:700;margin-bottom:10px}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:14px;color:var(--muted);margin-bottom:5px}
+.field input{width:100%;font-family:inherit;font-size:16px;padding:14px;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:#0B0D10}
+.field input.err{border-color:#e5484d}
+.emsg{color:#ff8a8d;font-size:13px;margin-top:4px;display:none}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;font-family:inherit;font-size:20px;font-weight:900;color:#fff;background:linear-gradient(180deg,var(--orange),var(--orange2));border:0;border-radius:16px;padding:17px;cursor:pointer;text-decoration:none;box-shadow:0 8px 22px rgba(228,111,28,.35)}
+.cta[disabled]{opacity:.6;cursor:wait}
+.consent{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+.thanks{text-align:center;padding:10px 0}
+.thanks .ok{width:70px;height:70px;border-radius:50%;background:var(--ok);display:grid;place-items:center;margin:0 auto 14px;font-size:34px}
+
+/* sticky */
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(0deg,rgba(10,31,61,1) 60%,rgba(10,31,61,0));transition:transform .3s}
+.sticky.hide{transform:translateY(120%)}
+.sticky .cta{max-width:560px;margin:0 auto}
+
+footer{margin-top:40px;border-top:1px solid var(--line);padding:24px 0 10px;color:var(--muted);font-size:12px;line-height:1.6}
+footer .links{display:flex;gap:10px;margin-bottom:16px}
+footer .links a{flex:1;text-align:center;text-decoration:none;color:#fff;font-weight:700;font-size:15px;padding:12px;border-radius:12px;border:1px solid var(--line)}
+footer .links a.wa{background:#25D366;border-color:#25D366;color:#0B0D10}
+
+@media (max-width:380px){.hero h1{font-size:33px}.big{font-size:38px}.gap .big{font-size:44px}.cmp{font-size:13.5px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#">
+      <span class="mark">K<b>D</b></span>
+      <span class="nm">קפלן דהאן<small>פירמה לביטוח ופיננסים</small></span>
+    </a>
+    <a class="hphone" href="tel:033731410">03-3731410</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="pill">יש לכם כסף בפיקדון או בקרן כספית? זה בשבילכם</span>
+    <h1>פער של <span class="hl num">+2.2</span> נקודות אחוז לטובת <span class="num">Apollo</span><sup>*</sup></h1>
+    <p class="sub">על אותו כסף שיושב לכם היום בפיקדון או בקרן כספית – בלי לוותר על נזילות.</p>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-card">
+    <video id="vid" playsinline preload="metadata" poster="apollo-poster.jpg">
+      <source src="apollo-video.mp4" type="video/mp4">
+    </video>
+    <button class="play" id="playBtn" aria-label="הפעלת הסרטון">
+      <span class="btn"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="lbl">למה הקרן הכספית כבר לא מספיקה?</span>
+      <span class="dur">דקה אחת · עם קול</span>
+    </button>
+  </div>
+  <p class="vcap">צפו – ההסבר המלא בפחות מדקה</p>
+
+  <!-- BARS -->
+  <section>
+    <div class="card" id="bars">
+      <div class="row">
+        <div><h3>מסלול <span class="num" style="font-weight:800">Apollo</span> אשראי ואג״ח</h3><div class="d">תשואה פנימית גלומה, בקירוב, במונחים שנתיים*</div></div>
+        <div class="big c-a"><small>כ-</small><span class="num" id="rA">5.3%</span></div>
+      </div>
+      <div class="bar a"><i data-w="100"></i></div>
+
+      <div class="row">
+        <div><h3>קרן כספית / אפיק קצר</h3><div class="d">תשואה פנימית גלומה, בקירוב, במונחים שנתיים*</div></div>
+        <div class="big c-k"><small>כ-</small><span class="num" id="rK">3.09%</span></div>
+      </div>
+      <div class="bar k"><i data-w="58"></i></div>
+
+      <div class="gap">
+        <div class="big"><span class="num" id="rGap">+2.2</span></div>
+        <p>נקודות אחוז פער לטובת <span class="num" style="font-weight:700">Apollo</span>, לפי נתוני הפניקס</p>
+      </div>
+      <p class="foot-note">* נתון אינדיקטיבי בלבד, נכון ל-17.09.2026. זו לא תשואה בפועל, לא תשואת עבר ואין בה התחייבות לתשואה עתידית. התשואה בפועל עשויה להיות שונה.</p>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section>
+    <h2 class="sec-t">מה ההבדל בפועל?</h2>
+    <p class="sec-s">אותו כסף, שני אפיקים – השוואה מהירה</p>
+    <table class="cmp">
+      <thead><tr><th></th><th class="ap">Apollo אשראי ואג״ח</th><th class="kp">קרן כספית</th></tr></thead>
+      <tbody>
+        <tr><td>תשואה גלומה*</td><td class="ap"><span class="num">~5.3%</span></td><td class="kp"><span class="num">~3.09%</span></td></tr>
+        <tr><td>במה משקיעים</td><td class="ap">אשראי ואג״ח של גופים חזקים בארה״ב</td><td class="kp">פיקדונות ומק״מ בישראל</td></tr>
+        <tr><td>מה מניע את התשואה</td><td class="ap">ריבית ארה״ב</td><td class="kp">ריבית בנק ישראל</td></tr>
+        <tr><td>חשיפה למטבע</td><td class="ap">מגודר מטבע – בשקלים</td><td class="kp">שקלית</td></tr>
+        <tr><td>רמת סיכון</td><td class="ap">נמוכה</td><td class="kp">נמוכה מאוד</td></tr>
+        <tr><td>נזילות</td><td class="ap">נזיל</td><td class="kp">נזיל</td></tr>
+      </tbody>
+    </table>
+    <p class="foot-note">* לאחר דמי ניהול, בקירוב, במונחים שנתיים. ההשוואה כללית ואינה מהווה המלצה – ההתאמה נבדקת אישית לכל לקוח.</p>
+  </section>
+
+  <!-- WHY -->
+  <section>
+    <h2 class="sec-t">למה דווקא עכשיו?</h2>
+    <div class="pts">
+      <div class="pt"><div class="ic">🇺🇸</div><div><h4>הריבית בארה״ב עולה</h4><p>ועל פי ההערכות עשויה להמשיך לעלות – זה מה שמניע את התשואה במסלול.</p></div></div>
+      <div class="pt"><div class="ic">🇮🇱</div><div><h4>ריבית בנק ישראל נשארת או יורדת</h4><p>הקרן הכספית, שהניבה 4–4.5%, עומדת היום על כ-3% בלבד.</p></div></div>
+      <div class="pt"><div class="ic">📈</div><div><h4>עד 70% יותר בתשואה</h4><p>אשראי ואג״ח של הגופים החזקים במשק – ברמת סיכון נמוכה, אחרי דמי ניהול.</p></div></div>
+      <div class="pt"><div class="ic">💧</div><div><h4>הכסף נשאר נזיל, בלי חשיפה למט״ח</h4><p>גידור מטבע מלא – לא נכנסים להימור על הדולר.</p></div></div>
+    </div>
+  </section>
+
+  <!-- CALC -->
+  <section>
+    <h2 class="sec-t">כמה זה שווה לכם?</h2>
+    <p class="sec-s">הזיזו את הסליידרים וראו את ההפרש</p>
+    <div class="card calc">
+      <label>סכום פנוי <span class="num" id="amtV">₪500,000</span></label>
+      <input type="range" id="amt" min="100000" max="5000000" step="50000" value="500000" aria-label="סכום">
+      <label>לכמה זמן <span id="yrsV">3 שנים</span></label>
+      <input type="range" id="yrs" min="1" max="10" step="1" value="3" aria-label="שנים">
+      <div class="res">
+        <div><span>בקרן כספית</span><b class="num c-k" id="outK">—</b></div>
+        <div><span>ב-Apollo</span><b class="num c-a" id="outA">—</b></div>
+        <div class="win"><span>הפרש פוטנציאלי לטובתכם</span><b class="num" id="outD">—</b></div>
+      </div>
+      <p class="foot-note">חישוב המחשה בלבד לפי הנתונים האינדיקטיביים שלמעלה, בריבית דריבית ולפני מס. אינו מהווה התחייבות לתשואה.</p>
+    </div>
+  </section>
+
+  <!-- FUNNEL -->
+  <section class="funnel" id="funnel">
+    <h2 class="sec-t">בדיקת התאמה אישית</h2>
+    <p class="sec-s">3 שאלות קצרות – ונחזור אליכם עם תשובה</p>
+    <div class="card">
+      <div class="prog"><i id="prog"></i></div>
+
+      <div class="step on" data-step="0">
+        <div class="q">איפה הכסף נמצא היום?</div>
+        <div class="opts">
+          <button class="opt" data-k="location" data-v="קרן כספית">קרן כספית</button>
+          <button class="opt" data-k="location" data-v="פיקדון בנקאי">פיקדון בנקאי</button>
+          <button class="opt" data-k="location" data-v="עו״ש">בעו״ש</button>
+          <button class="opt" data-k="location" data-v="שילוב">שילוב של כמה</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="1">
+        <div class="q">על איזה סכום מדובר?</div>
+        <div class="opts">
+          <button class="opt" data-k="amount" data-v="עד 300 אלף">עד ₪300,000</button>
+          <button class="opt" data-k="amount" data-v="300 אלף - 1 מיליון">₪300,000 – ₪1,000,000</button>
+          <button class="opt" data-k="amount" data-v="1-3 מיליון">₪1 – ₪3 מיליון</button>
+          <button class="opt" data-k="amount" data-v="מעל 3 מיליון">מעל ₪3 מיליון</button>
+        </div>
+        <button class="back" data-back>→ חזרה</button>
+      </div>
+
+      <div class="step" data-step="2">
+        <div class="q">מתי ייתכן שתצטרכו את הכסף?</div>
+        <div class="opts">
+          <button class="opt" data-k="horizon" data-v="בשנה הקרובה">בשנה הקרובה</button>
+          <button class="opt" data-k="horizon" data-v="1-3 שנים">בעוד 1–3 שנים</button>
+          <button class="opt" data-k="horizon" data-v="מעל 3 שנים">מעל 3 שנים</button>
+          <button class="opt" data-k="horizon" data-v="לא יודע">עוד לא יודע/ת</button>
+        </div>
+        <button class="back" data-back>→ חזרה</button>
+      </div>
+
+      <div class="step" data-step="3">
+        <span class="badge">✓ נראה שיש פוטנציאל התאמה</span>
+        <div class="q" id="resT">השאירו פרטים ונבדוק עבורכם</div>
+        <form id="leadForm" novalidate>
+          <div class="field">
+            <label for="full_name">שם מלא</label>
+            <input id="full_name" name="full_name" autocomplete="name" required>
+            <div class="emsg">נא להזין שם מלא</div>
+          </div>
+          <div class="field">
+            <label for="phone">טלפון נייד</label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" required>
+            <div class="emsg">נא להזין מספר נייד תקין (10 ספרות, מתחיל ב-05)</div>
+          </div>
+          <button class="cta" type="submit" id="sendBtn">שלחו לי בדיקה ←</button>
+          <p class="consent">בלחיצה אני מאשר/ת לקפלן דהאן ליצור איתי קשר בנושא.</p>
+        </form>
+        <button class="back" data-back>→ חזרה</button>
+      </div>
+
+      <div class="step" data-step="4">
+        <div class="thanks">
+          <div class="ok">✓</div>
+          <div class="q">תודה! הפרטים התקבלו</div>
+          <p style="color:var(--muted)">נציג מקפלן דהאן יחזור אליכם בהקדם עם בדיקה מותאמת.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a class="wa" href="https://wa.me/972537338338" target="_blank" rel="noopener">וואטסאפ</a>
+      <a href="tel:033731410">03-3731410</a>
+    </div>
+    <p>קפלן דהאן פירמה לביטוח ופיננסים. האמור בעמוד זה הוא מידע כללי בלבד ואינו מהווה ייעוץ השקעות, ייעוץ פנסיוני או המלצה לביצוע פעולה כלשהי, ואינו מחליף התאמה אישית. הנתונים אינדיקטיביים, נכונים למועד המצוין, ואינם מהווים התחייבות לתשואה. השקעה כרוכה בסיכון, לרבות אפשרות להפסד. דמי ניהול, מיסוי ותנאי משיכה משתנים לפי המוצר.</p>
+  </footer>
+</main>
+
+<div class="sticky" id="sticky"><a class="cta" href="#funnel">בדקו לי התאמה ←</a></div>
+
+<script>
+(function(){
+  /* ===== נתונים – לעדכון במקום אחד ===== */
+  var RATE_APOLLO = 0.053, RATE_KASPIT = 0.0309;
+  var W3F_KEY = '3196d164-1737-4d2b-b915-475e7d224172';
+  var SOURCE_ID = 'apollo';
+
+  var fmt = function(n){return '₪' + Math.round(n).toLocaleString('en-US');};
+
+  /* video */
+  var vid = document.getElementById('vid'), pb = document.getElementById('playBtn');
+  pb.addEventListener('click', function(){
+    vid.controls = true; pb.classList.add('hidden');
+    var p = vid.play(); if (p && p.catch) p.catch(function(){});
+    if (window.fbq) fbq('trackCustom','VideoPlay',{source:SOURCE_ID});
+  });
+  vid.addEventListener('ended', function(){
+    document.getElementById('funnel').scrollIntoView({behavior:'smooth'});
+  });
+
+  /* bars animate on view */
+  var bars = document.querySelectorAll('.bar i');
+  var grow = function(){bars.forEach(function(b){b.style.width = b.dataset.w + '%';});};
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){grow();io.disconnect();}});},{threshold:.3});
+    io.observe(document.getElementById('bars'));
+  } else grow();
+
+  /* calculator */
+  var amt = document.getElementById('amt'), yrs = document.getElementById('yrs');
+  function calc(){
+    var a = +amt.value, y = +yrs.value;
+    var fa = a*Math.pow(1+RATE_APOLLO,y), fk = a*Math.pow(1+RATE_KASPIT,y);
+    document.getElementById('amtV').textContent = fmt(a);
+    document.getElementById('yrsV').textContent = y === 1 ? 'שנה אחת' : y + ' שנים';
+    document.getElementById('outK').textContent = fmt(fk);
+    document.getElementById('outA').textContent = fmt(fa);
+    document.getElementById('outD').textContent = '+' + fmt(fa - fk);
+  }
+  amt.addEventListener('input', calc); yrs.addEventListener('input', calc); calc();
+
+  /* funnel */
+  var steps = document.querySelectorAll('.step'), prog = document.getElementById('prog');
+  var ans = {}, cur = 0, hist = [];
+  function go(n){
+    steps.forEach(function(s){s.classList.toggle('on', +s.dataset.step === n);});
+    cur = n; prog.style.width = Math.min(n,3)/3*100 + '%';
+  }
+  document.querySelectorAll('.opt').forEach(function(b){
+    b.addEventListener('click', function(){
+      b.parentNode.querySelectorAll('.opt').forEach(function(o){o.classList.remove('sel');});
+      b.classList.add('sel'); ans[b.dataset.k] = b.dataset.v;
+      hist.push(cur); setTimeout(function(){go(cur+1);}, 180);
+    });
+  });
+  document.querySelectorAll('[data-back]').forEach(function(b){
+    b.addEventListener('click', function(){ if(hist.length) go(hist.pop()); });
+  });
+
+  /* lead form */
+  var form = document.getElementById('leadForm'), btn = document.getElementById('sendBtn');
+  var nm = document.getElementById('full_name'), ph = document.getElementById('phone');
+  function bad(el, on){el.classList.toggle('err', on); el.nextElementSibling.style.display = on ? 'block' : 'none';}
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = nm.value.trim(), phone = ph.value.replace(/\D/g,'');
+    var okN = name.length >= 2, okP = /^05\d{8}$/.test(phone);
+    bad(nm, !okN); bad(ph, !okP);
+    if (!okN || !okP) return;
+    btn.disabled = true; btn.textContent = 'שולח...';
+    var payload = {
+      access_key: W3F_KEY,
+      subject: 'ליד חדש – מחולל אפולו',
+      from_name: 'קפלן דהאן – אפולו',
+      source_id: SOURCE_ID,
+      full_name: name, phone: phone,
+      money_location: ans.location || '', amount_range: ans.amount || '', horizon: ans.horizon || '',
+      calc_amount: amt.value, calc_years: yrs.value
+    };
+    fetch('https://api.web3forms.com/submit', {
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(payload)
+    }).then(function(r){return r.json();}).then(function(json){
+      if (json.success){
+        if (window.fbq) fbq('track','Lead',{content_name:SOURCE_ID});
+        go(4); document.getElementById('sticky').classList.add('hide');
+      } else throw new Error(json.message || 'fail');
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = 'שלחו לי בדיקה ←';
+      var body = encodeURIComponent('שם: '+name+'\nטלפון: '+phone+'\nמיקום הכסף: '+(ans.location||'')+'\nסכום: '+(ans.amount||'')+'\nטווח: '+(ans.horizon||''));
+      if (confirm('הייתה תקלה בשליחה. לשלוח במייל במקום?')) location.href = 'mailto:ofird@kd-ins.co.il?subject=' + encodeURIComponent('ליד – מחולל אפולו') + '&body=' + body;
+    });
+  });
+
+  /* hide sticky CTA while funnel visible */
+  var sticky = document.getElementById('sticky');
+  if ('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){es.forEach(function(e){sticky.classList.toggle('hide', e.isIntersecting);});},{threshold:.15})
+      .observe(document.getElementById('funnel'));
+  }
+})();
+</script>
+</body>
+</html>
